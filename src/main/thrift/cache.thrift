@@ -1,4 +1,4 @@
-namespace java com.github.iwag
+namespace java com.github.chintootech
 
 struct CacheResponse {
 1:    optional string hit

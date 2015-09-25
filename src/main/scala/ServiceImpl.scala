@@ -1,10 +1,10 @@
-package com.github.iwag
+package com.github.chintootech
 
 import java.net.InetSocketAddress
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicInteger
 
-import com.github.iwag.CacheService.FinagledService
+import com.github.chintootech.CacheService.FinagledService
 import com.twitter.server.TwitterServer
 import com.twitter.finagle.{ListeningServer, Service, Thrift}
 import com.twitter.util.{Future, Await}

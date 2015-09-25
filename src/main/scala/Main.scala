@@ -1,4 +1,4 @@
-package com.github.iwag
+package com.github.chintootech
 
 import java.net.InetSocketAddress
 import java.nio.ByteBuffer
