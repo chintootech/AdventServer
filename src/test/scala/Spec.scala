@@ -1,4 +1,4 @@
-package com.github.iwag
+package com.github.chintootech
 
 import org.scalatest._
 import com.twitter.logging._
