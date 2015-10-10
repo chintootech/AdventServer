@@ -1,21 +1,18 @@
 package com.github.chintootech
 
 import java.net.InetSocketAddress
-import java.nio.ByteBuffer
-import com.twitter.finagle.Filter
-import com.twitter.finagle.service.{TimeoutFilter, RetryPolicy, RetryingFilter}
-import com.twitter.finagle.thrift.ThriftClientFramedCodec
-import com.twitter.util.TimeConversions._
-import com.twitter.server.TwitterServer
-import com.twitter.finagle.{SimpleFilter, Thrift, Service, Http}
+
 import com.twitter.finagle.http.HttpMuxer
+import com.twitter.finagle.service.{RetryPolicy, RetryingFilter, TimeoutFilter}
+import com.twitter.finagle.util.DefaultTimer
+import com.twitter.finagle.{Filter, Http, Service, SimpleFilter, Thrift}
 import com.twitter.io.Charsets._
 import com.twitter.logging.Logger
+import com.twitter.server.TwitterServer
+import com.twitter.util.TimeConversions._
 import com.twitter.util._
-import org.apache.thrift.protocol.TBinaryProtocol
 import org.jboss.netty.buffer.ChannelBuffers._
 import org.jboss.netty.handler.codec.http._
-import com.twitter.finagle.util.DefaultTimer
 
 class CacheFilter(cacheService: CacheService.FutureIface) extends SimpleFilter[HttpRequest, HttpResponse] {
   override def apply(request: HttpRequest, service: Service[HttpRequest, HttpResponse]): Future[HttpResponse] = {

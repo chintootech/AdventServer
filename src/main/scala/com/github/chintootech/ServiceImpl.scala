@@ -1,15 +1,12 @@
 package com.github.chintootech
 
 import java.net.InetSocketAddress
-import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicInteger
 
-import com.github.chintootech.CacheService.FinagledService
-import com.twitter.server.TwitterServer
-import com.twitter.finagle.{ListeningServer, Service, Thrift}
-import com.twitter.util.{Future, Await}
+import com.twitter.finagle.{ListeningServer, Thrift}
 import com.twitter.logging.Logger
-import org.apache.thrift.protocol.TBinaryProtocol
+import com.twitter.server.TwitterServer
+import com.twitter.util.{Await, Future}
 
 import scala.collection.mutable
 
