@@ -3,10 +3,10 @@ build & run
 ==========
 
 ```
-$ sbt 'run-main com.github.iwag.StoreServer -admin.port=:49991 -bind=:49091'
-$ sbt 'run-main com.github.iwag.SearchServer -admin.port=:49992 -bind=:49092'
-$ sbt 'run-main com.github.iwag.CacheServer -admin.port=:49993 -bind=:49093'
-$ sbt 'run-main com.github.iwag.HTTPServer -admin.port=:49990 -http=:48000 -search=:49092 -cache=:49093 -db=:49091'
+$ sbt 'run-main com.github.chintootech.StoreServer -admin.port=:49991 -bind=:49091'
+$ sbt 'run-main com.github.chintootech.SearchServer -admin.port=:49992 -bind=:49092'
+$ sbt 'run-main com.github.chintootech.CacheServer -admin.port=:49993 -bind=:49093'
+$ sbt 'run-main com.github.chintootech.HTTPServer -admin.port=:49990 -http=:48000 -search=:49092 -cache=:49093 -db=:49091'
 $
 $ curl -XPOST http://localhost:48000/ -d'hello world'
 OK
